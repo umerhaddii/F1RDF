@@ -32,7 +32,7 @@ def add_bg_from_local(image_file):
 
 # Set page config and background
 st.set_page_config(layout="wide")
-add_bg_from_local('/images/f1.avif')
+add_bg_from_local('images/f1.avif')
 
 st.sidebar.markdown(
     "<h1 style='color: #FF1E00; font-weight: bold; font-size: 48px;'>F1RDF 🏎️</h1>", 
