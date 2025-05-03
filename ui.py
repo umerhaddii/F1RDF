@@ -97,7 +97,7 @@ def main():
 
         st.sidebar.markdown("")
         st.sidebar.markdown("## About")
-        st.sidebar.info("This app fetches Formula 1 racing data from 1950 to present. Select a year and Grand Prix to access detailed race information including results, standings, lap times, pit stops, and more. You can download any data table as a CSV file.")
+        st.sidebar.info("The app fetches Formula 1 racing data from 1950 to present. Select a year and Grand Prix to access detailed race information including results, standings, lap times, pit stops, and more. You can download any data table as a CSV file.")
 
         st.sidebar.markdown("")
         st.sidebar.markdown("<h1 style='color: #00A1E8; font-weight: bold; font-size: 20px;'>Built by Umer Haddii</h1>", 
