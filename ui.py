@@ -39,6 +39,13 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
+# Add New Chat button
+if st.sidebar.button("Home", key="new_chat", type="secondary", use_container_width=True):
+    # Clear all session state variables
+    for key in st.session_state.keys():
+        del st.session_state[key]
+    st.rerun()
+
 # Update F1 races list (remove round numbers from names)
 f1_races = [
     "Australian Grand Prix",
