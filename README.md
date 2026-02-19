@@ -62,7 +62,9 @@ streamlit run ui.py
 ## Requirements
 
 - Python 3.7+
+- fastf1
 - Streamlit
 - Pandas
 - Matplotlib
+
 
