@@ -3,6 +3,8 @@
 A Streamlit application that provides comprehensive Formula 1 racing data from 1950 to present.
 
 ![f1drf](https://github.com/user-attachments/assets/febeda48-a2b2-4803-bb3c-7994aafbf189)
+<img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/d0dd6eeb-54d3-454d-9ba6-fddcc9b02d5e" />
+
 
 
 ## Features
@@ -66,5 +68,6 @@ streamlit run ui.py
 - Streamlit
 - Pandas
 - Matplotlib
+
 
 
