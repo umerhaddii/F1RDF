@@ -40,7 +40,7 @@ st.sidebar.markdown(
 )
 
 # Add New Chat button
-if st.sidebar.button("Home", key="new_chat", type="secondary", use_container_width=True):
+if st.sidebar.button("Home", key="new_chat", type="secondary", width="stretch"):
     st.session_state.data_fetched = False
     st.session_state.fetched_data = {}
     st.rerun()
@@ -108,12 +108,12 @@ def main():
     toggle_col1, toggle_col2 = st.columns(2)
     with toggle_col1:
         fetcher_type = "primary" if st.session_state.active_view == 'fetcher' else "secondary"
-        if st.button("Data Fetcher", key="view_fetcher", type=fetcher_type, use_container_width=True):
+        if st.button("Data Fetcher", key="view_fetcher", type=fetcher_type, width="stretch"):
             st.session_state.active_view = 'fetcher'
             st.rerun()
     with toggle_col2:
         calendar_type = "primary" if st.session_state.active_view == 'calendar' else "secondary"
-        if st.button("Race Calendar", key="view_calendar", type=calendar_type, use_container_width=True):
+        if st.button("Race Calendar", key="view_calendar", type=calendar_type, width="stretch"):
             st.session_state.active_view = 'calendar'
             st.rerun()
     st.markdown("---")
@@ -226,13 +226,13 @@ def main():
                 btn_col1, btn_col2 = st.columns(2)
 
                 with btn_col1:
-                    if st.button("Select All", key="select_all_btn", use_container_width=True):
+                    if st.button("Select All", key="select_all_btn", width="stretch"):
                         st.session_state.select_all = not st.session_state.select_all
                         st.rerun()
 
                 with btn_col2:
                     fetch_label = f"🚀 Fetch Selected Data ({selected_count})" if selected_count > 0 else "🚀 Fetch Selected Data"
-                    if st.button(fetch_label, key="fetch_btn", type="primary", use_container_width=True):
+                    if st.button(fetch_label, key="fetch_btn", type="primary", width="stretch"):
                         if not any(selected_sections.values()):
                             st.warning("Please select at least one data section to fetch.")
                         else:
@@ -278,7 +278,7 @@ def main():
             col1, col2 = st.columns([1, 1])
 
             with col1:
-                if st.button("🔄 Fetch Different Data", type="secondary", use_container_width=True):
+                if st.button("🔄 Fetch Different Data", type="secondary", width="stretch"):
                     st.session_state.data_fetched = False
                     st.session_state.fetched_data = {}
                     st.session_state.select_all = False
@@ -322,7 +322,7 @@ def main():
                         file_name=f"F1_Data_{st.session_state.selected_year}_{st.session_state.selected_race.replace(' ', '_')}.zip",
                         mime="application/zip",
                         type="primary",
-                        use_container_width=True,
+                        width="stretch",
                         key="download_all_zip"
                     )
 
@@ -371,7 +371,7 @@ def main():
                                 file_name=filename,
                                 mime="application/json",
                                 key=f"download_{key}",
-                                use_container_width=True
+                                width="stretch"
                             )
                         else:
                             st.dataframe(data, use_container_width=True)
@@ -382,9 +382,8 @@ def main():
                                 file_name=filename,
                                 mime="text/csv",
                                 key=f"download_{key}",
-                                use_container_width=True
+                                width="stretch"
                             )
 
 if __name__ == '__main__':
     main()
-
